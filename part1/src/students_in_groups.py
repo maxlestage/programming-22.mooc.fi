@@ -15,3 +15,17 @@ Number of groups formed: 4
 
 Hint: the integer division operator // could come in handy here.
 """
+import math
+
+nb_students = int(input("How many students on the course? "))
+nb_group = int(input("Desired group size? "))
+
+print(f"Number of groups formed: {int(math.ceil(nb_students/nb_group))}")  # math.ceil : arrondie au supérieur.
+
+# Correction d'une façon différente :
+students = int(input("How many students on the course? "))
+group_size = int(input("Desired group size? "))
+
+groups = (students + group_size - 1) // group_size
+
+print("Number of groups formed:", groups)
